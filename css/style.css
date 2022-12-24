@@ -44,9 +44,8 @@ body {
     z-index: -1;
     object-position: center;
     object-fit: cover;
-    filter: blur(3px);
-    transform: scale(1.04);
-    filter: brightness(25%);
+    transform: scale(1.4);
+    filter: blur(8px) brightness(20%);
 
   }
   .video-container {
