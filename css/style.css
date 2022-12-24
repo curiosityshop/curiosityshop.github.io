@@ -363,6 +363,61 @@ header #container {
 .h-blocks #botside{
   max-width: 142px;
 }
+/* block2 */
+#c-h2-text h2{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 42px;
+line-height: 51px;
+color: #050C33;
+
+}
+#comptextwrap{
+  padding-left: 9px;
+  max-width: 580px;
+}
+#h4-text{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 22px;
+/* or 138% */
+
+
+/* main-black */
+
+color: #050C33;
+
+opacity: 0.7;
+}
+.competency{
+  padding-top: 100px;
+  padding-left: 130px;
+}
+#c-botside{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 22px;
+}
+.b-cicon-bg{
+  position: absolute;
+  left: -52px;
+}
+#c-topside{
+  margin-bottom: 30px;
+  position: relative;
+}
+.c-blocks{
+  max-width: 182px;
+  margin-top: 70px;
+}
+.c-block{
+  float: left;
+}
 @media (min-width: 375px) {
   header #container {
     
