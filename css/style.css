@@ -28,10 +28,8 @@ body {
     color: white;
     width: 98%;
     text-align: center;
-    height: 650px;
     overflow: hidden;
     position:relative;
-    max-height: 1024px;
   }
   
   video {
@@ -143,9 +141,7 @@ letter-spacing: 0em;
 text-align: center;
 margin-bottom: 20px;
 }
-#h1-text{
-max-width: 506px;
-}
+
 #container h2{
   font-family: Montserrat;
   font-size: 14px;
@@ -156,13 +152,12 @@ max-width: 506px;
 }
 #h2-text{
 
-  height: 56px;
-  max-width: 486px;
+ 
   margin-top: 15px;
   border-radius: nullpx;
 }
 #btn-prices{
-position: absolute;
+
 width: 220px;
 
 border: 2px solid #F14D34;
@@ -201,7 +196,7 @@ align-items: center;
 color: #FFFFFF;
 }
 #block-1 #botside{
-  max-width: 161px;
+  max-width: 141px;
 }
 #cup{
   margin-bottom: 30px;
@@ -344,29 +339,67 @@ video{
   float: none;
 }
 #statistic{
-  margin-top: 200px;
+  margin-top: 60px;
   float: none;
 }
 header #container {
-  max-width: 500px;
+  
   margin-top: 40px;
 }
 #threeblocks1{
   float: left;
 }
 #threeblocks2{
-  float: right;
+  float: left;
 }
+#btn-prices{
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 95px;
+}
+#threeblocks1{
+  padding-left: 15px;
+}
+.h-blocks #botside{
+  max-width: 142px;
+}
+@media (min-width: 375px) {
+  header #container {
+    
+  }
+  #leftside{
+    margin: 0 auto;
+    }
+    #threeblocks1{
+      margin-right: 6vw;
+    }
+ }
+@media (min-width: 425px) {
+  #threeblocks1{
+    margin-right: 18vw;
+  }
+ }
 @media (min-width: 600px) {
+  header #container {
+    
+  }
   #container h1{
   font-size: 42px;
   line-height:50px;
   }
   #container h2{
+    font-size: 42px;
+    line-height:20px;
+    }
+  #container h2{
     font-size: 14px;
     
     }
-    
+    #threeblocks1{
+      margin-right: 25vw;
+      padding-left: 15px;
+    }
+ 
  }
  @media (min-width: 768px) {
   #container h1{
@@ -385,23 +418,17 @@ line-height: 60px;
   #m-nav{
     display: none;
   }
-  #leftside{
-    float: left;
+  #threeblocks1{
+    margin-right: 0;padding-left: 0;
   }
   #statistic{
-    margin-top: 0;
+    margin-top: 40px;
     
     padding-top: 40px;
-    float: right;
   }
-  header {
-    color: white;
-    width: 98%;
-    text-align: center;
-    height: 650px;
-    overflow: hidden;
-    position:relative;
-    max-height: 1024px;
+  header{
+    height: 110vh;
+    
   }
   header #container {
     max-width: 750px;
@@ -419,7 +446,10 @@ line-height: 60px;
   #threeblocks2{
     float: none;
   }
-  
+  #btn-prices{
+    margin:0;
+    margin-top: 55px;
+  }
  }
 
  @media (min-width: 992px) {
@@ -427,15 +457,49 @@ line-height: 60px;
     max-width: 970px;
     margin-top: 130px;
   }
+  #leftside{
+    float: left;
+  }
+  #h1-text{
+    max-width: 506px;
+    }
+    #h2-text{
+      height: 56px;
+      max-width: 486px;
+    }
+    #threeblocks1{
+      padding-left: 0;
+    }
   #statistic{
-    padding-left: 5.6vw;}
+    float: right;
+    padding-left: 3.5vw;
     
+      margin-top: 0px;
+  }
+    header {
+      width: 100%;
+      height: 650px;
+      max-height: 1024px;
+    }
+    header {
+      color: white;
+      width: 100%;
+      text-align: center;
+      height: 650px;
+      overflow: hidden;
+      position:relative;
+      max-height: 1024px;
+    }
  }
  @media (min-width: 1200px) {
   header #container {
     max-width: 1180px;
     margin-top: 130px;
   }
+  #statistic{
+    padding-left: 100px;}
+    
+ 
  }
 
 
