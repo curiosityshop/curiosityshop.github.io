@@ -23,7 +23,9 @@ body {
   body {
     background-color: #E5E5E5;
   }
-  
+  #druplicon{
+    z-index: -1;
+    }
   header {
     color: white;
     width: 98%;
@@ -132,7 +134,7 @@ header #container{
   margin: 130px 0 60px 130px;
 
 }
-#container h1{
+header #container h1{
   font-family: Montserrat;
 font-size: 24px;
 font-weight: 700;
@@ -142,7 +144,7 @@ text-align: center;
 margin-bottom: 20px;
 }
 
-#container h2{
+header #container h2{
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 500;
@@ -394,7 +396,6 @@ opacity: 0.7;
 }
 .competency{
   padding-top: 100px;
-  padding-left: 130px;
 }
 #c-botside{
   font-family: 'Montserrat';
@@ -406,18 +407,96 @@ line-height: 22px;
 .b-cicon-bg{
   position: absolute;
   left: -52px;
+  top:10px;
 }
 #c-topside{
   margin-bottom: 30px;
   position: relative;
 }
 .c-blocks{
-  max-width: 182px;
   margin-top: 70px;
 }
 .c-block{
   float: left;
 }
+
+  #c-container{
+    max-width: 1180px;
+  }
+
+
+/* block3 */
+#s-h2-text h2{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 51px;
+  text-align: center;
+
+}
+.support{
+  margin-top: 180px;
+}
+#s-topside{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+color: #050C33;
+
+margin-bottom: 12px;
+}
+#s-botside{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  /* or 138% */
+  
+  
+  /* main-black */
+  
+  color: #050C33;
+  
+  opacity: 0.7;
+}
+.s-numb{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 15px;
+color: #050C33;
+
+opacity: 0.5;
+margin-bottom: 20px;
+}
+
+#s-container{
+  max-width: 1180px;
+}
+.s-blocks{
+  border-radius: 5px;
+  box-shadow: 20px 20px 40px rgb(5 12 51 / 5%);
+  height: 292px;
+ 
+}
+.s-blocks-wrapper{
+  padding-left: 25px;
+}
+#botimg{
+  position: relative;
+}
+.c-cicon{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+/* responsive shapka, navbar to bottom start */
+
 @media (min-width: 375px) {
   header #container {
     
@@ -438,15 +517,15 @@ line-height: 22px;
   header #container {
     
   }
-  #container h1{
+  header #container h1{
   font-size: 42px;
   line-height:50px;
   }
-  #container h2{
+  header #container h2{
     font-size: 42px;
     line-height:20px;
     }
-  #container h2{
+    header #container h2{
     font-size: 14px;
     
     }
@@ -457,13 +536,13 @@ line-height: 22px;
  
  }
  @media (min-width: 768px) {
-  #container h1{
+  header #container h1{
     font-size: 52px;
     text-align: left;
 margin-bottom: 15px;
 line-height: 60px;
     }
-    #container h2{
+    header #container h2{
       font-size: 18px;
       text-align: left;
       }
@@ -551,6 +630,7 @@ line-height: 60px;
     max-width: 1180px;
     margin-top: 130px;
   }
+  
   #statistic{
     padding-left: 100px;}
     
@@ -558,50 +638,7 @@ line-height: 60px;
  }
 
 
-/* responsive shapka, navbar to bottom start */
-/* 
-@media (max-width: 1050px) {
-  header{
-    height: 110vh;
-    
-  }
-  video{
-    height: 110vh;
-  }
-  #leftside{
-    float: none;
-  }
-  #statistic{
-    margin-top: 200px;
-    float: none;
-    width: 750px;
-  }
-  header #container {
-    max-width: 720px;
-}
 
-  }
-  @media (max-width: 790px) {
-    header{
-      height: 110vh;
-      
-    }
-    video{
-      height: 110vh;
-    }
-    #leftside{
-      float: none;
-    }
-    #statistic{
-      margin-top: 200px;
-      float: none;
-      width: 500px;
-    }
-    header #container {
-      max-width: 500px;
-  }
-  }
-*/
 
 .content {
   background-color: white;
