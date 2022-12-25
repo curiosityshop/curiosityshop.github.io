@@ -597,7 +597,7 @@ opacity: 0.7;
 }
 
 
-/* block4 */
+/* block5 */
 .tarifi{
   
   background: url(../img/D.png) no-repeat right top,#fff;
@@ -814,6 +814,63 @@ margin-top: 43px;
   
   
 }
+.tarif-text{
+  margin-top: 52px;
+  width: 468px;
+  font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 22px;
+/* or 138% */
+
+text-align: center;
+
+/* main-black */
+
+color: #050C33;
+
+opacity: 0.5;
+}
+.recv-tarif{
+  margin-top: 26px;
+}
+.recv-tarif a{
+  width: 279px;
+  
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height, or 100% */
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.06em;
+text-decoration-line: underline;
+text-transform: uppercase;
+
+/* main-black */
+
+color: #050C33;
+}
+/* block6 */
+#c2-head{
+  font-size: 32px;
+  margin-top: -20px;
+  color: #050c33;
+  font-weight: bold;
+}
+#c2-bot{
+  font-weight: 500;
+  font-size: 16px;
+  color: #4f5a73;
+}
+#c2omptextwrap{
+  padding-left: 9px;
+
+}
 /* responsive shapka, navbar to bottom start */
 
 @media (min-width: 375px) {
@@ -903,6 +960,9 @@ line-height: 60px;
     margin:0;
     margin-top: 55px;
   }
+  #c-container, #s-container,#e-container,#t-container{
+    max-width: 750px;
+  }
  }
 
  @media (min-width: 992px) {
@@ -943,6 +1003,9 @@ line-height: 60px;
       position:relative;
       max-height: 1024px;
     }
+    #c-container, #s-container,#e-container,#t-container{
+      max-width: 970px;
+    }
  }
  @media (min-width: 1200px) {
   header #container {
@@ -952,7 +1015,9 @@ line-height: 60px;
   
   #statistic{
     padding-left: 100px;}
-    
+    #c-container, #s-container,#e-container,#t-container{
+      max-width: 1180px;
+    }
  
  }
 
