@@ -368,10 +368,9 @@ header #container {
   font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
-font-size: 42px;
-line-height: 51px;
+font-size: 24px;
+line-height: 33px;
 color: #050C33;
-
 }
 #comptextwrap{
   padding-left: 9px;
@@ -399,23 +398,30 @@ opacity: 0.7;
   font-family: 'Montserrat';
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
 line-height: 22px;
 }
-.b-cicon-bg{
+
+#c-topwrp::before{
   position: absolute;
-  left: -52px;
-  top:10px;
+  content: url("../img/svg/icon-bg.svg");
+  top: 12px;
+  left: -37px;
 }
 #c-topside{
   margin-bottom: 30px;
+  
+}
+#c-topwrp{
   position: relative;
+  width: 81px;
+  margin: 0 auto;
 }
 .c-blocks{
   margin-top: 70px;
 }
 .c-block{
   float: left;
+  margin-bottom: 60px;
 }
 
 
@@ -426,13 +432,12 @@ line-height: 22px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  font-size: 42px;
-  line-height: 51px;
+  
   text-align: center;
 
 }
 .support{
-  margin-top: 180px;
+  margin-top: 20px;
 }
 #s-topside{
   font-family: 'Montserrat';
@@ -510,41 +515,71 @@ height: 292px;
   max-width: 1180px;
 }
 #e-bg-icon{
-  
+  position: relative;
 }
 #druplicon2{
   position: absolute;
-  top: 187px;
-  left: 480px;
-}
-#e-laptop-icon {
-  width: 50vw;
 
-  float: left;
+}
+#e-laptop-icon{
+  position: relative;
+  width: 55%;
+  max-width: 735px;
+}
+#laptop{
+width: 100%;
+height: auto;
+transform: translateY(47%);
+}
+#e-bg {
+  height: 300px;
+  width: 300px;
   position: relative;
 }
 
-#laptop {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+#e-back {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -62%);
+  bottom: 0;
+  max-width: 100%;
+  width: auto;
+
 }
 .expertise{
   position: relative;
-  height: 1039px;
+  height: 1300px;
   background: linear-gradient(254.72deg,rgba(255,255,255,.276) -114.85%,rgba(255,255,255,0) 69.04%),#040613;
+}
+#h-container-fluid::before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  top: 0;
+  background: url("../img/svg/druplicon.svg") no-repeat top left;
+  background-size: contain;
+  z-index: 10;
+}
+.expertise:before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../img/svg/drupal-logo-2.svg") no-repeat right bottom;
+  background-size: contain;
+  z-index: 10;
 }
 
 #e-h2-text h2{
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  font-size: 42px;
-  line-height: 51px;
+
   
   /* White */
   
@@ -608,8 +643,7 @@ opacity: 0.7;
   font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
-font-size: 42px;
-line-height: 51px;
+
 align-items: center;
 text-align: center;
 color: #000000;
@@ -869,10 +903,28 @@ color: #050C33;
 }
 /* responsive shapka, navbar to bottom start */
 /* cringe2*/
-#c-container, #s-container,#e-container,#t-container{
+#c-container, #s-container,.e-container,#t-container{
   padding-left: 15px;
   padding-right: 15px;
 }
+#c-botside{
+  text-align: left;
+  margin: 0 auto;
+  font-size: 14px;
+}
+.c-block{
+  text-align: center;
+}
+#c-text{
+  font-size: 16px;
+  color: #4f5a73;
+}
+#s-h2-text h2,#e-h2-text h2,#t-h2-text h2{
+  font-size: 24px;
+  line-height: 28px;
+}
+
+
 @media (min-width: 375px) {
   header #container {
     
@@ -883,11 +935,17 @@ color: #050C33;
     #threeblocks1{
       margin-right: 6vw;
     }
+    #laptop{
+      transform: translateY(27%);
+      }
  }
 @media (min-width: 425px) {
   #threeblocks1{
     margin-right: 18vw;
   }
+  #laptop{
+    transform: translateY(27%);
+    }
  }
 @media (min-width: 600px) {
   header #container {
@@ -909,7 +967,7 @@ color: #050C33;
       margin-right: 25vw;
       padding-left: 15px;
     }
- 
+  
  }
  @media (min-width: 768px) {
   header #container h1{
@@ -961,11 +1019,43 @@ line-height: 60px;
     margin-top: 55px;
   }
   
-  #c-container, #s-container,#e-container,#t-container{
+  #c-container, #s-container,.e-container,#t-container{
     max-width: 750px;
     padding-left: 15px;
     padding-right: 15px;
   }
+  .c-block{
+    text-align: left;
+  }
+
+  #c-topwrp{
+
+    margin: 0;
+  }
+  #c-h2-text h2{
+
+  font-size: 42px;
+line-height: 51px;
+  }
+  #c-botside{
+
+  font-size: 16px;
+  }
+  #s-h2-text h2,#e-h2-text h2,#t-h2-text h2{
+    font-size: 42px;
+    line-height: 53px;
+  
+  }
+  .support{
+    margin-top: 180px;
+  }
+  .expertise{
+    height: 1039px;
+  }
+  #laptop{
+    transform: translateY(-36%);
+    }
+    
  }
 
  @media (min-width: 992px) {
@@ -1006,9 +1096,12 @@ line-height: 60px;
       position:relative;
       max-height: 1024px;
     }
-    #c-container, #s-container,#e-container,#t-container{
+    #c-container, #s-container,.e-container,#t-container{
       max-width: 970px;
     }
+    #laptop{
+      transform: translateY(-46%);
+      }
  }
  @media (min-width: 1200px) {
   header #container {
@@ -1021,6 +1114,9 @@ line-height: 60px;
     #c-container, #s-container,#e-container,#t-container{
       max-width: 1180px;
     }
+    #laptop{
+      transform: translateY(-56%);
+      }
  
  }
 
