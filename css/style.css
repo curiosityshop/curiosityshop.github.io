@@ -419,9 +419,6 @@ line-height: 22px;
 .c-block{
   float: left;
 }
-<<<<<<< HEAD
-
-=======
 
   #c-container{
     max-width: 1180px;
@@ -642,7 +639,6 @@ line-height: 60px;
 
 
 
->>>>>>> a1d1f2c064a133b64da6a70fde1a4f4116eb809a
 
 .content {
   background-color: white;
@@ -666,8 +662,7 @@ line-height: 60px;
 }
 
 .team__list {
-  width:100%;
-  max-width: 1080px;
+  width: 1080px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -718,7 +713,7 @@ line-height: 60px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
   border-radius: 5px;
-  width: 600px;
+  width: 852px;
   height: 300px;
   position: absolute;
   opacity: 0.5;
@@ -732,7 +727,7 @@ line-height: 60px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
   border-radius: 5px;
-  width: 500px;
+  width: 724px;
   height: 300px;
   position: absolute;
   opacity: 0.5;
@@ -744,11 +739,6 @@ line-height: 60px;
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.right-quote-sign img{
-  width:256px;
-  height:300px;
 }
 
 .reviews__title {
@@ -764,7 +754,7 @@ line-height: 60px;
 .rect-wrapper {
   position:relative;
   margin: 0px auto;
-  width: 700px;
+  width: 980px;
 }
 .reviews__wrapper {
   z-index: 3;
@@ -858,10 +848,9 @@ line-height: 60px;
  
 .partners {
   overflow: hidden;
-  padding: 0 auto;
+  padding: 50px;
   padding-top: 0px;
   padding-bottom: 160px;
-  width:100%;
 }
 
 .partners-title {
@@ -874,7 +863,7 @@ line-height: 60px;
 }
 
 .partners-descr {
-  max-width: 740px;
+  width: 740px;
   margin: 0 auto;
   padding-bottom: 42px;
   font-weight: 500;
@@ -924,7 +913,7 @@ line-height: 60px;
   position: relative;
   display:flex;
   height:70%;
-  max-height:490px;
+  max-height:760px;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -938,7 +927,7 @@ line-height: 60px;
   z-index: 2;
   float:left;
   width:50%;
-  height: 100%;
+  max-height: 100%;
 }
 
 .contacts-desk {
@@ -955,9 +944,7 @@ line-height: 60px;
 }
 
 .sp  {
-  width: 100%;
-  min-width: 205px;
-  max-width: 480px;
+  width: 480px;
 }
 .contacts-desk p{
   font-family: 'Montserrat';
@@ -966,10 +953,8 @@ line-height: 60px;
   font-size: 14px;
   line-height: 22px;
   opacity: 0.7;
-  margin-bottom: 0px;
-  width:100%;
-  min-width: 205px;
-  max-width: 480px;
+  margin-bottom: 140px;
+  width: 480px;
 }
 
 .phone, .mail{
@@ -1014,8 +999,8 @@ margin-left: 20px;
 .form-elem {
   color: white;
   font-size: 14px;
-  width: 100%;
-  min-width: 185px;
+  min-width:240px;
+  width: 480px;
   height: 68px;
   border-radius: 5px;
   box-sizing: border-box;
@@ -1028,23 +1013,21 @@ margin-left: 20px;
 .form-elem {
   width: 100%;
   max-width: 480px;
-  height:55px;
+  
 }
-
 
 .form-check-label {
   font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-  color: #FFFFFF;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+color: #FFFFFF;
 }
 
 .form-btn {
     text-transform: uppercase;
     color: white;
-    min-width:180px;
-    width: 100%;
+    width: 480px;
     height: 60px;
     border: 2px solid #f14d34;
     border-radius: 5px;
@@ -1071,11 +1054,6 @@ margin-left: 20px;
   bottom: 0;
 }
 
-.D img {
-  width:233px;
-  height:105px;
-}
-
 /*D-letters styles end*/
 
 hr {
@@ -1099,219 +1077,3 @@ hr {
 }
 
 /* footer styles end */
-
-@media (min-width: 375px) {
-  header #container {
-    
-  }
-  #leftside{
-    margin: 0 auto;
-    }
-    #threeblocks1{
-      margin-right: 6vw;
-    }
- }
-@media (min-width: 425px) {
-  #threeblocks1{
-    margin-right: 18vw;
-  }
- }
-@media (min-width: 600px) {
-  header #container {
-    
-  }
-  #container h1{
-  font-size: 42px;
-  line-height:50px;
-  }
-  #container h2{
-    font-size: 42px;
-    line-height:20px;
-    }
-  #container h2{
-    font-size: 14px;
-    
-    }
-    #threeblocks1{
-      margin-right: 25vw;
-      padding-left: 15px;
-    }
- 
- }
- @media (min-width: 768px) {
-  #container h1{
-    font-size: 52px;
-    text-align: left;
-    margin-bottom: 15px;
-    line-height: 60px;
-    }
-    #container h2{
-      font-size: 18px;
-      text-align: left;
-      }
-  #navigationbar{
-    display: block;
-  }
-  #m-nav{
-    display: none;
-  }
-  #threeblocks1{
-    margin-right: 0;padding-left: 0;
-  }
-  #statistic{
-    margin-top: 40px;
-    
-    padding-top: 40px;
-  }
-  header{
-    height: 110vh;
-    
-  }
-  header #container {
-    max-width: 750px;
-    margin-top: 130px;
-  }
-  .h-blocks, .brdr, .blocks-wrapper{
-    float: left;
-  }
-  #block-1,#block-2,#block-3{
-    margin-bottom: 70px;
-  }
-  #threeblocks1{
-    float: none;
-  }
-  #threeblocks2{
-    float: none;
-  }
-  #btn-prices{
-    margin:0;
-    margin-top: 55px;
-  }
- }
-
- @media (min-width: 992px) {
-  header #container {
-    max-width: 970px;
-    margin-top: 130px;
-  }
-  #leftside{
-    float: left;
-  }
-  #h1-text{
-    max-width: 506px;
-    }
-    #h2-text{
-      height: 56px;
-      max-width: 486px;
-    }
-    #threeblocks1{
-      padding-left: 0;
-    }
-  #statistic{
-    float: right;
-    padding-left: 3.5vw;
-    
-      margin-top: 0px;
-  }
-    header {
-      width: 100%;
-      height: 650px;
-      max-height: 1024px;
-    }
-    header {
-      color: white;
-      width: 100%;
-      text-align: center;
-      height: 650px;
-      overflow: hidden;
-      position:relative;
-      max-height: 1024px;
-    }
-
-.rect-wrapper {
-  width:980px;
-}
-
-#rectangle-1 {
-  width:852px;
-}
-#rectangle-2 {
-  width:724px;
-}
-
-    .contacts-desk p{
-      margin-bottom:50px;
-    }
- }
- @media (min-width: 1200px) {
-  header #container {
-    max-width: 1180px;
-    margin-top: 130px;
-  }
-  #statistic{
-    padding-left: 100px;}
-
-    .right-quote-sign img{
-      width:512px;
-      height:516px;
-    }
-    
-    .D img {
-      width:467px;
-      height:213px;
-    }
-
-    .contacts-desk p{
-      margin-bottom:120px;
-    }
-
-    .form-elem{
-      height:68px;
-    }
- }
-
-
-/* responsive shapka, navbar to bottom start */
-/* 
-@media (max-width: 1050px) {
-  header{
-    height: 110vh;
-    
-  }
-  video{
-    height: 110vh;
-  }
-  #leftside{
-    float: none;
-  }
-  #statistic{
-    margin-top: 200px;
-    float: none;
-    width: 750px;
-  }
-  header #container {
-    max-width: 720px;
-}
-
-  }
-  @media (max-width: 790px) {
-    header{
-      height: 110vh;
-      
-    }
-    video{
-      height: 110vh;
-    }
-    #leftside{
-      float: none;
-    }
-    #statistic{
-      margin-top: 200px;
-      float: none;
-      width: 500px;
-    }
-    header #container {
-      max-width: 500px;
-  }
-  }
-*/
