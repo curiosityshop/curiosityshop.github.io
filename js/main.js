@@ -39,6 +39,15 @@ $(document).ready(function () {
                 variableWidth: true,
             }
         }],
+        responsive: [{
+            breakpoint: 1300,
+            settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                centerMode: false,
+                variableWidth: true,
+            }
+        }],
     });
 
     $('.partners__slider-2').slick({
@@ -59,6 +68,15 @@ $(document).ready(function () {
                 centerMode: true,
                 focusOnSelect: true,
                 variableWidth: true
+            }
+        }],
+        responsive: [{
+            breakpoint: 1300,
+            settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                centerMode: false,
+                variableWidth: true,
             }
         }],
     });
