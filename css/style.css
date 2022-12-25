@@ -1011,6 +1011,65 @@ line-height: 60px;
 
 /* partners styles end */
 
+/* FAQ styles start */
+
+.faq {
+  width: 80%;
+  margin:0 auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 160px;
+}
+
+.faq-title {
+  font-size: 42px;
+  line-height: 51px;
+  text-align: center;
+  color: #050C33;
+  font-weight: 700;
+  margin-bottom:30px;
+}
+
+.section {
+  width:100%;
+}
+
+.faq-container{
+  width:100%;
+}
+.faq-text {
+  font-size: 16px;
+  line-height: 22px;
+  color: #050C33;
+  opacity: 0.7;
+}
+
+.faq-container summary {
+  list-style: none;;
+  color: #050C33;
+  font-weight: bold;
+  font-size: 16px;
+  display:flex;
+}
+
+.faq-container details[open] {
+  padding:5px;
+  border: 2px solid #f14d34;
+  border-radius: 5px;
+}
+
+.faq-container details[open] summary{
+  color:#f14d34;
+}
+.faq-container details[open] .zol{
+  color: #050C33;
+  font-size: 16px;
+}
+
+
+/*FAQ styles end*/
+
 /*footer styles start*/
 .footer{
   background-color: #040613;
@@ -1198,6 +1257,7 @@ hr {
 }
 
 /* footer styles end */
+
 
  /*Случайно всё сломал, теперь делаю отдельно */
  
