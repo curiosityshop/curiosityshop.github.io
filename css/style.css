@@ -400,17 +400,17 @@ font-weight: 500;
 line-height: 22px;
 }
 
-#c-topwrp::before{
+.c-topwrp::before{
   position: absolute;
   content: url("../img/svg/icon-bg.svg");
   top: 12px;
   left: -37px;
 }
-#c-topside{
+.c-topside{
   margin-bottom: 30px;
   
 }
-#c-topwrp{
+.c-topwrp{
   position: relative;
   width: 81px;
   margin: 0 auto;
@@ -1090,7 +1090,7 @@ line-height: 60px;
     text-align: left;
   }
 
-  #c-topwrp{
+  .c-topwrp{
 
     margin: 0;
   }
