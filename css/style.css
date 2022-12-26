@@ -1279,9 +1279,8 @@ line-height: 51px;
 }
 
 .cases__cards {
-  display:grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 20px;
+  width:90%;
+  margin:0 auto;
 }
 
 .cases__cards img{
@@ -1289,16 +1288,8 @@ line-height: 51px;
 }
 
 
-.cases__card_size_small {
-  grid-column: span 2;
-}
-
-.cases__card_size_big {
-  grid-column: span 4;
-}
-
 .cases__card-pic-small_dark{
-  height:215px;
+  height:200px;
   object-fit: cover;
 }
 .cases__card-pic-big{
@@ -1339,15 +1330,6 @@ line-height: 51px;
   left:40px;
 }
 
-.cases__card_text_dark {
-  position:absolute;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  color: #050C33;
-  left:30px;
-  bottom: 106px;
-}
 .cases__date {
   position: absolute;
   font-weight: 700;
@@ -1358,25 +1340,30 @@ line-height: 51px;
   bottom:40px;
   left:40px;
 }
+
+.cases__card_text_dark {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #050C33;
+  padding-left:15px;
+}
+
 .cases__date_dark {
-  position: absolute;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
   color: #050C33;
   opacity: 0.5;
-  bottom:86px;
-  left:30px;
+  padding-left:15px;
 }
 .cases__card_desc {
-  position:absolute;
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
   color: #050C33;
   opacity: 0.7;
-  left:30px;
-  bottom:0px;
+  padding-left:15px;
 }
 
 .cases__more {
@@ -1921,6 +1908,42 @@ hr {
  }
 
  @media (min-width:768px) {
+
+  .cases__cards {
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    width:100%;
+  }
+
+  .cases__card_size_small {
+    grid-column: span 2;
+  }
+  
+  .cases__card_size_big {
+    grid-column: span 4;
+  }
+
+
+  .cases__card_text_dark {
+    position: absolute;
+    left:30px;
+    bottom: 106px;
+    padding-left:0px;
+  }
+  
+  .cases__date_dark {
+    position: absolute;
+    bottom:86px;
+    left:30px;
+    padding-left:0px;
+  }
+  .cases__card_desc {
+    position: absolute;
+    left:30px;
+    bottom:0px;
+    padding-left:0px;
+  }
 
   .reviews__wrapper {
     display:flex;
