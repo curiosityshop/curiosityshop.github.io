@@ -438,7 +438,7 @@ line-height: 22px;
 .support{
   margin-top: 20px;
 }
-#s-topside{
+.s-topside{
   font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
@@ -448,7 +448,7 @@ color: #050C33;
 
 margin-bottom: 12px;
 }
-#s-botside{
+.s-botside{
   font-family: 'Montserrat';
   font-style: normal;
   font-size: 16px;
@@ -480,7 +480,7 @@ margin-bottom: 20px;
 .s-blocks{
 height: 292px;
 }
-#s-botside{
+.s-botside{
   position: relative;
   z-index: 100;
 }
@@ -488,7 +488,7 @@ height: 292px;
   padding-left: 30px;
   padding-right: 35px;
 }
-#botimg{
+.botimg{
   position: relative;
 }
 .c-cicon{
@@ -615,7 +615,7 @@ transform: translateY(47%);
   border-left:#F14D34 solid 3px;
   height: 100px;
 }
-#e-topside{
+.e-topside{
   font-family: 'Montserrat';
 font-style: normal;
 font-weight: 500;
