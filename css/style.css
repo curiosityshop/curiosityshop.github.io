@@ -1021,8 +1021,8 @@ color: #050C33;
   header #container h1{
     font-size: 52px;
     text-align: left;
-margin-bottom: 15px;
-line-height: 60px;
+    margin-bottom: 15px;
+    line-height: 60px;
     }
     .tarif-text{
     font-size: 16px;
@@ -1924,6 +1924,9 @@ hr {
     grid-column: span 4;
   }
 
+  .cases__cards p {
+    margin-bottom: 0px;
+  }
 
   .cases__card_text_dark {
     position: absolute;
@@ -1934,7 +1937,7 @@ hr {
   
   .cases__date_dark {
     position: absolute;
-    bottom:86px;
+    bottom:90px;
     left:30px;
     padding-left:0px;
   }
