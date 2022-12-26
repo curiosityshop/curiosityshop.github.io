@@ -1481,8 +1481,8 @@ line-height: 51px;
 }
 
 .right-quote-sign img{
-  width:256px;
-  height:300px;
+  width:150px;
+  height:200px;
 }
 
 .reviews__title {
@@ -1492,7 +1492,7 @@ line-height: 51px;
   font-size: 42px;
   line-height: 51px;
   text-align: center;
-  margin-top:60px;
+  margin-top:30px;
 }
 
 .rect-wrapper {
@@ -1945,9 +1945,18 @@ hr {
     padding-left:0px;
   }
 
+  .right-quote-sign img{
+    width:256px;
+    height:300px;
+  }
+
   .reviews__wrapper {
     display:flex;
     padding: 66px 0px 66px 66px;
+  }
+
+  .reviews__title{
+    margin-top:60px;
   }
 
   .reviews__slider {
