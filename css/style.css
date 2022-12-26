@@ -72,7 +72,7 @@ body {
     text-decoration: none;
 }
 #navbar, #pc-nav a{
-  padding: 0;
+  
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
@@ -108,13 +108,10 @@ body {
 }
 #dropdwnmenu1{
   width: 190px;
-  padding-left: 10px;
+  
 }
-#dm3{
-  padding-left: 10px;
-}#dm2{
-  padding-left: 10px;
-}
+
+
 #navbar .ul-li{
   
   margin-right: 30px;
@@ -126,6 +123,8 @@ body {
 a:hover{color:white;}
 #navbar li.ul-li:hover{
   border-bottom:#F14D34 solid 3px;
+  
+  transition: border-bottom 400ms;
 }
 header{
   padding: 0;
@@ -583,7 +582,7 @@ transform: translateY(47%);
   top: 0;
   background: url("../img/svg/druplicon.svg") no-repeat top left;
   background-size: contain;
-  z-index: 10;
+  z-index: -2;
 }
 .expertise:before{
   content: "";
