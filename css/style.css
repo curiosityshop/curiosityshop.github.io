@@ -1696,7 +1696,7 @@ line-height: 51px;
 .faq-container details[open] summary{
   color:#f14d34;
 }
-.faq-container details[open] .zol{
+.faq-container details[open] span{
   color: #050C33;
   font-size: 16px;
 }
