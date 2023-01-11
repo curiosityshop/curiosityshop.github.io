@@ -95,11 +95,21 @@ body {
   background-color: #F14D34;
   border-radius: 0 !important;
 }
+
+#pc-nav .dropdown-menu a{
+  padding-bottom: 0;
+  padding-top: 2px;
+}
 #dm2{
   width: 100px;
 }
 .dropdown-item{
   color: white;
+}
+.dropdown-menu a {
+  background-color: transparent;
+  transition: background-color 300ms;
+  
 }
 .dropdown-menu a:hover {
   background-color: #D13018;
@@ -121,10 +131,15 @@ body {
   margin-top: 30px;
 }
 a:hover{color:white;}
+#navbar li.ul-li{
+  border-bottom:#f14d3400 solid 3px;
+  transition: border-color 500ms;
+}
 #navbar li.ul-li:hover{
-  border-bottom:#F14D34 solid 3px;
   
-  transition: border-bottom 400ms;
+  border-color:#F14D34;
+  
+  
 }
 header{
   padding: 0;
@@ -159,11 +174,7 @@ header #container h2{
 }
 
 #btn-prices {
-
   width: 220px;
-  
-
-  
   }
 #btn-prices a{
 
@@ -181,6 +192,12 @@ text-decoration: none;
 border: 2px solid #F14D34;
 border-radius: 5px;
 padding: 21px 80px;
+background-color: transparent;
+transition: background-color 450ms;
+
+}
+#btn-prices a:hover{
+  background-color: #F14D34;
 }
 
 #block-1 .topside{
@@ -276,14 +293,17 @@ header #container{
 #mob-nav li{
   list-style-type: none;
 }
-
+#mob-nav{
+  border-top: 1px solid #1a1a1a;
+  padding-top: 0;
+}
  #mob-nav a:hover{
   color: #f14d34;
     background-color: transparent;
     
  }
 
- #mob-nav #items{
+ #mob-nav .brdrs{
   border-bottom: 1px solid #312a2a;
 
  }
@@ -299,12 +319,13 @@ header #container{
   text-transform: uppercase;
   color: #fff;
   text-align: left;
-  padding: 7px 20px;
+  padding: 10px 20px;
+  
 
  }
  #mob-nav .nav-item ul a{
-  padding: 7px 40px;
-
+  padding: 10px 35px;
+  
  }
 #mob-nav .navlink a{
 padding-left: 40px;
@@ -421,6 +442,7 @@ line-height: 22px;
 .c-block{
   float: left;
   margin-bottom: 60px;
+  padding-right: 15px;
 }
 
 
@@ -478,7 +500,7 @@ margin-bottom: 20px;
  
 }
 .s-blocks{
-height: 292px;
+height: 300px;
 }
 .s-botside{
   position: relative;
@@ -789,6 +811,7 @@ color: #050C33;
 }
 .t-botside{
   margin-top: 48px;
+  
 }
 .t-string::before {
   position: absolute;
@@ -837,6 +860,7 @@ padding: 21px 44px;
   justify-content: center;
 margin-top: 43px;
 margin-bottom: 15px;
+
 
 }
 .ts-btn-prices a{
@@ -980,6 +1004,9 @@ color: #050C33;
         width: 70%;
         transform: translateY(3%);
       }
+      .s-blocks{
+        height: 203px;
+      }
  }
 @media (min-width: 425px) {
   #threeblocks1{
@@ -993,6 +1020,12 @@ color: #050C33;
 
       width: 70%;
       transform: translateY(3%);
+    }
+
+ }
+ @media (min-width:576px){
+  .s-blocks{
+    height: 292px;
     }
  }
 @media (min-width: 600px) {
@@ -1014,6 +1047,10 @@ color: #050C33;
     #threeblocks1{
       margin-right: 25vw;
       padding-left: 15px;
+    }
+    .c-botside{
+      text-align: center;
+
     }
 
  }
@@ -1038,8 +1075,8 @@ color: #050C33;
   }
   .t-blocks{
     padding-top:30px;
-    padding-left: 5px;
-  padding-right: 5px;
+    padding-left: 20px;
+  padding-right: 20px;
   }
   .t-blocks{
     margin-left: 7px;
@@ -1135,6 +1172,17 @@ line-height: 51px;
 #t-btn-prices{
   margin-bottom: 45px;
 }
+.tarifprice{
+  font-size: 65px;
+}
+.c-botside{
+  margin-left: 19px;
+}
+.c-botside{
+  text-align: left;
+
+}
+
  }
 
  @media (min-width: 992px) {
@@ -1146,13 +1194,16 @@ line-height: 51px;
     margin-left: 0;
     margin-right: 0;
   }
-  .t-block{
-    margin-left: -7px;
+  #block-t-1{
+    margin-left: -20px;
+  }
+  #block-t-3{
+    margin-left: -3px;
   }
   .t-blocks{
     padding-top:66px;
-    padding-left: 60px;
-  padding-right: 60px;
+    padding-left: 50px;
+  padding-right: 50px;
   }
   #e1-laptop-icon::before{
   
@@ -1224,6 +1275,9 @@ line-height: 51px;
       .e-block{
         margin-bottom: 40px;
       }
+      .tarifprice{
+        font-size: 72px;
+      }
  }
  @media (min-width: 1200px) {
   header #container {
@@ -1233,11 +1287,7 @@ line-height: 51px;
   #t-block-2{
     width: 420px;
   }
-  .t-blocks{
-    padding-top:66px;
-    padding-left: 60px;
-  padding-right: 60px;
-  }
+
   #statistic{
     padding-left: 100px;}
     .c-container, #s-container,#e-container,.t-container{
@@ -1252,10 +1302,13 @@ line-height: 51px;
         width: 40%;
         transform: translateY(10%);
       }
+      #block-t-3{
+        margin-left: 20px;
+      }
  }
 
 
-
+ 
 
 .content {
   background-color: white;
