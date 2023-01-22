@@ -1,9 +1,9 @@
 <template>
   <div>
-    <button class="fixed-bottom-right" @click="showForm = true">Show Form</button>
+    <button class="fixed-bottom-right" @click="showForm = true" :disabled="isLoading" v-if="!success">Show Form</button>
     <div v-if="showForm" class="form-popup">
       <div class="form" id="forma">
-        <form class="ajaxForm" action="https://formcarry.com/s/JF_YGh9Qp" accept-charset="UTF-8" id="form1">
+        <form @submit.prevent="submitForm">
           <div class="form-group">
             <input type="text" name="name" class="form-control" id="InputName" placeholder="Ваше имя" required>
           </div>
@@ -22,8 +22,17 @@
             <label class="form-check-label" for="Check">
               <a title = "Отныне и навеки, моя душа будет принадлежать создателю данной страницы">Согласен с политикой обработки персональных данных. </a></label>
           </div>
-          <button type="submit" class="form-btn btn-primary" id="b">Отправить</button>
+          <button type="submit" class="form-btn btn-primary" :disabled="isLoading">
+            <span v-if="isLoading">Submitting...</span>
+            <span v-else>Submit</span>
+          </button>
         </form>
+        <div v-if="error" class="error-message">
+          {{ error }}
+        </div>
+        <div v-if="success" class="success-message">
+          Form submitted successfully!
+        </div>
       </div>
     </div>
   </div>
@@ -31,14 +40,51 @@
 
 <script>
 export default {
-  
-  name: 'ContactUS',
+  data() {
+    return {
+      showForm: false,
+      isLoading: false,
+      success: false,
+      error: null,
+    }
+  },
+  methods: {
+    async submitForm(e) {
+      try {
+        this.isLoading = true;
+        let formData = new FormData(e.target);
+        let response = await fetch('https://formcarry.com/s/JF_YGh9Qp', {
+          method: 'POST',
+          body: formData
+        });
+        if(response.ok) {
+          this.success = true;
+          this.isLoading = false;
+        } else {
+          throw new Error('Failed to submit form');
+        }
+      } catch (err) {
+        this.error = 'Failed to submit form. Please try again.';
+        this.isLoading = false;
+      }
+    },
+  },
 }
 </script>
 
 
 
+
 <style>
+/* existing styles for fixed-bottom-right and form-popup */
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
 .fixed-bottom-right {
   position: fixed;
   bottom: 20px;
