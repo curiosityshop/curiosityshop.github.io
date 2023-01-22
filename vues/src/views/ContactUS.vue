@@ -1,21 +1,20 @@
 <template>
-  <div>
+ <div>
     <button class="fixed-bottom-right" @click="showForm = true" :disabled="isLoading" v-if="!success">Show Form</button>
     <div v-if="showForm" class="form-popup">
       <div class="form" id="forma">
         <form @submit.prevent="submitForm">
           <div class="form-group">
-            <input type="text" name="name" class="form-control" id="InputName" placeholder="Ваше имя" required>
+            <input type="text" v-model="name" name="name" class="form-control" id="InputName" placeholder="Ваше имя" required>
           </div>
           <div class="form-group">
-            <input type="tel" name="phone" class="form-control" id="InputPhone" placeholder="Телефон" required>
+            <input type="tel" v-model="number" name="phone" class="form-control" id="InputPhone" placeholder="Телефон" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" class="form-control" id="InputEmail" placeholder="E-mail"
-              required>
+            <input type="email" v-model="email" name="email" class="form-control" id="InputEmail" placeholder="E-mail" required>
           </div>
           <div class="form-group">
-            <textarea name="msg" class="form-control" id="Textarea" rows="3" placeholder="Ваш комментарий" ></textarea>
+            <textarea v-model="comment" name="msg" class="form-control" id="Textarea" rows="3" placeholder="Ваш комментарий"></textarea>
           </div>
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="Check" required>
@@ -49,28 +48,50 @@ export default {
     }
   },
   methods: {
-    async submitForm(e) {
-      try {
-        this.isLoading = true;
-        let formData = new FormData(e.target);
-        let response = await fetch('https://formcarry.com/s/JF_YGh9Qp', {
-          method: 'POST',
-          body: formData
-        });
-        if(response.ok) {
-          this.success = true;
-          this.isLoading = false;
-        } else {
-          throw new Error('Failed to submit form');
+    async submitForm() {
+        try {
+            this.isLoading = true;
+            let formData = {
+                name: this.name,
+                number: this.number,
+                email: this.email,
+                comment: this.comment
+            }
+            let response = await fetch('https://formcarry.com/s/6V6Ujnz1n', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+            if (response.ok) {
+                this.success = true;
+                this.isLoading = false;
+            } else {
+                throw new Error('Failed to submit form');
+            }
+        } catch (err) {
+            this.error = 'Failed to submit form. Please try again.';
+            this.isLoading = false;
         }
-      } catch (err) {
-        this.error = 'Failed to submit form. Please try again.';
-        this.isLoading = false;
-      }
     },
-  },
+},
+
 }
 </script>
+
+<style>
+/* existing styles for fixed-bottom-right and form-popup */
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
+</style>
 
 
 
