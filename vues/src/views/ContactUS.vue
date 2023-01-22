@@ -38,62 +38,54 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
+  computed: {
+  ...mapState({
+    isLoading: state => state.isLoading,
+    success: state => state.success,
+    error: state => state.error
+  })
+},
   data() {
     return {
       showForm: false,
-      isLoading: false,
-      success: false,
-      error: null,
+      name: '',
+      number: '',
+      email: '',
+      comment: ''
     }
   },
-  methods: {
-    async submitForm() {
-        try {
-            this.isLoading = true;
-            let formData = {
-                name: this.name,
-                number: this.number,
-                email: this.email,
-                comment: this.comment
-            }
-            let response = await fetch('https://formcarry.com/s/6V6Ujnz1n', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
-            if (response.ok) {
-                this.success = true;
-                this.isLoading = false;
-            } else {
-                throw new Error('Failed to submit form');
-            }
-        } catch (err) {
-            this.error = 'Failed to submit form. Please try again.';
-            this.isLoading = false;
-        }
-    },
-},
+
+methods: {
+  async submitForm() {
+    this.$store.commit('setLoading', true);
+    try {
+      const response = await fetch('https://formcarry.com/s/6V6Ujnz1n', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+        body: JSON.stringify({
+          name: this.name,
+          number: this.number,
+          email: this.email,
+          comment: this.comment
+        })
+      });
+      if (response.ok) {
+        this.$store.commit('setSuccess', true);
+      } else {
+        throw new Error('Failed to submit form. Please try again.');
+      }
+    } catch (error) {
+      this.$store.commit('setError', error.message);
+    } finally {
+      this.$store.commit('setLoading', false);
+    }
+  }
+}
 
 }
 </script>
-
-<style>
-/* existing styles for fixed-bottom-right and form-popup */
-
-.error-message {
-  color: red;
-}
-
-.success-message {
-  color: green;
-}
-</style>
-
-
 
 
 <style>
