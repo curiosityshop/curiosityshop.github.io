@@ -31,36 +31,7 @@
 
 <script>
 export default {
-  data() {
-    return {
-      showForm: false,
-      name: '',
-      number: '',
-      email: '',
-      comment: '',
-    }
-  },
-  computed: {
-    nameError() {
-      return !this.name
-    },
-    numberError() {
-      return !this.number
-    },
-/*    emailError() {
-      if (!this.email) return true
-      const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      return !emailRegex.test(this.email)
-    },*/
-  },
-  methods: {
-    submitForm() {
-      if (this.nameError || this.numberError || this.emailError) {
-        return
-      }
-      console.log('Form submitted!')
-    },
-  },
+  
   name: 'ContactUS',
 }
 </script>
