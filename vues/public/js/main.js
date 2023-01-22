@@ -84,7 +84,9 @@ $(document).ready(function () {
 
   /* Отправка формы */
 
-  let names = document.getElementById("InputName");
+  
+  document.addEventListener("DOMContentLoaded", function (event) {
+    let names = document.getElementById("InputName");
   let phone = document.getElementById("InputPhone");
   let email = document.getElementById("InputEmail");
   let msg = document.getElementById("Textarea");
@@ -101,7 +103,6 @@ $(document).ready(function () {
         localStorage.setItem('Чекбокс', 0);
       }
   }
-  document.addEventListener("DOMContentLoaded", function (event) {
     names.value = localStorage.getItem("Имя");
     phone.value = localStorage.getItem("Телефон");
     email.value = localStorage.getItem("Почта");
