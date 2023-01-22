@@ -1,8 +1,10 @@
 <template>
  <div>
-    <button class="fixed-bottom-right" @click="showForm = true" :disabled="isLoading" v-if="!success">Show Form</button>
-    <div v-if="showForm" class="form-popup">
-      <div class="form" id="forma">
+    <button class="fixed-bottom-right" @click="showForm = true" :disabled="isLoading" v-if="!success">Связь с нами</button>
+
+    <div class="dialog" v-if="showForm" @click.stop="hideForm">
+    <div @click.stop class="form-popup" >
+      <div class="form-dialog" id="forma">
         <form @submit.prevent="submitForm">
           <div class="form-group">
             <input type="text" v-model="name" name="name" class="form-control" id="InputName" placeholder="Ваше имя" required>
@@ -34,6 +36,8 @@
         </div>
       </div>
     </div>
+  </div>
+
   </div>
 </template>
 
@@ -81,7 +85,10 @@ methods: {
     } finally {
       this.$store.commit('setLoading', false);
     }
-  }
+  },
+  hideForm() {
+      this.showForm = false;
+    }
 }
 
 }
@@ -90,6 +97,13 @@ methods: {
 
 <style>
 /* existing styles for fixed-bottom-right and form-popup */
+
+.form-dialog {
+  width:100%;
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:5px;
+}
 
 .error-message {
   color: red;
@@ -102,15 +116,26 @@ methods: {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  z-index: 20000;
 }
 
-.form-popup {
-  z-index: 10000;
+.dialog{
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  z-index:20000;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  display:flex;
+}
+.form-popup {
+  margin:0 auto;
+  margin-top:auto;
+  margin-bottom: auto;;
   background-color: #040613;
   padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #f14d34;
+  border-radius: 5px;
 }
 </style>
