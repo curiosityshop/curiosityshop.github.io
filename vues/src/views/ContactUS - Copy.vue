@@ -1,12 +1,12 @@
 <template>
   <div>
-    
-     <button id="btn" class="fixed-bottom-right" @click="showForm = true" :disabled="isLoading">Связь с нами</button>
-
-     <div id="diag" class="dialog" v-if="showForm" @click.stop="hideForm">
-     <div @click.stop class="form-popup" >
-       <div class="form-dialog" id="forma">
-         <form @submit.prevent="submitForm">
+    <button class="fixed-bottom-right" ref="button" @click="showForm = true" :disabled="isLoading">
+      Contact Us
+    </button>
+    <transition name="fade">
+      <div class="dialog" v-show="showForm" @click.stop="hideForm">
+        <div @click.stop class="form-popup" ref="formPopup">
+          <form @submit.prevent="submitForm">
            <div class="form-group">
              <input type="text" v-model="name" name="name" class="form-control" id="InputName" placeholder="Ваше имя" required>
            </div>
@@ -25,20 +25,18 @@
                <a title = "Отныне и навеки, моя душа будет принадлежать создателю данной страницы">Согласен с политикой обработки персональных данных. </a></label>
            </div>
            <button type="submit" class="form-btn btn-primary" :disabled="isLoading">
-             <span v-if="isLoading">Отправка...</span>
-             <span v-else>Отправить</span>
+             <span v-if="isLoading">Submitting...</span>
+             <span v-else>Submit</span>
            </button>
-         </form>
-         <div class="messageD">
+          </form>
+          <div class="messageD">
             {{ message }}
-         </div>
-       </div>
-     </div>
-   </div>
- 
-   </div>
-   
- </template>
+          </div>
+        </div>
+      </div>
+    </transition>
+  </div>
+</template>
  
  <script>
  import { mapState } from 'vuex'
@@ -48,9 +46,7 @@
      isLoading: state => state.isLoading,
      success: state => state.success,
      error: state => state.error
-   }),
-
-
+   })
  },
    data() {
      return {
@@ -62,7 +58,14 @@
        comment: ''
      }
    },
-
+   mounted() {
+    this.$nextTick(() => {
+      const button = this.$refs.button;
+      this.$refs.formPopup.style.transform = `translate3d(${button.offsetLeft}px, ${button.offsetTop}px, 0)`;
+      this.$refs.formPopup.style.setProperty("--x", `${button.offsetLeft}px`);
+      this.$refs.formPopup.style.setProperty("--y", `${button.offsetTop}px`);
+    });
+  },
  methods: {
    async submitForm() {
      this.$store.commit('setLoading', true);
@@ -79,96 +82,38 @@
        });
        if (response.ok) {
          this.$store.commit('setSuccess', true);
-         this.message="Форма отправлена!";
-         this.name='';
-         this.number='';
-         this.email='';
-         this.comment='';
-         localStorage.removeItem(this.newName);
-         localStorage.removeItem(this.newNumber);
-         localStorage.removeItem(this.newEmail);
-         localStorage.removeItem(this.newComment);
+         this.message="Form submitted successfully!";
        } else {
          throw new Error('Failed to submit form. Please try again.');
        }
      } catch (error) {
        this.message="Failed to submit form. Please try again!"
      } finally {
-       this.$store.commit('setLoading', false);
-     }
+        setTimeout(() => {
+          this.showForm = false;
+        }, 3000);
+        this.$store.commit('setLoading', false);
+      }
    },
    hideForm() {
        this.showForm = false;
-       history.pushState(true, null, "#");
-     },
-     sForm() {
-       this.showForm = true;
      }
- },
- mounted() {
-  window.addEventListener("popstate", () => {
-    this.hideForm();
-  });
-
-  if (location.hash === "#contactus") {
-    this.sForm();
-  }
-
-
-  
-    document.addEventListener('DOMContentLoaded', function () {
-      let c = document.getElementById("btn");
-
-  c.addEventListener("click", () => {
-    history.pushState(true, null, "#contactus");
-  
-  });
-
-
-  if (location.hash === "#contactus") {
-    this.sForm();
-  }
-
-
-  
-    });
-
-
-    
-    if (localStorage.name) {
-      this.name = localStorage.name;
-    }
-    if (localStorage.email) {
-      this.email = localStorage.email;
-    }
-    if (localStorage.number) {
-      this.number = localStorage.number;
-    }
-    if (localStorage.comment) {
-      this.comment = localStorage.comment;
-    }
-  },
-  watch: {
-    name(newName) {
-      localStorage.name = newName;
-    },
-    email(newEmail) {
-      localStorage.email= newEmail;
-    },
-    number(newNumber) {
-      localStorage.number = newNumber;
-    },
-    comment(newComment) {
-      localStorage.comment = newComment;
-    }
-  }
-}
+ }
+ 
+ }
  </script>
  
  
  <style>
- /* existing styles for fixed-bottom-right and form-popup */
- 
+.fade-enter-active, .fade-leave-active {
+  transition: transform 0.5s ease-in-out;
+}
+.fade-enter {
+  transform: translate3d(var(--x)px, var(--y)px, 0);
+}
+.fade-leave-to {
+  transform: translate3d(var(--x), var(--y), 0);
+}
  .form-dialog {
    width:100%;
    padding-left:15px;
@@ -185,7 +130,7 @@
 
  .fixed-bottom-right {
    position: fixed;
-   bottom: 70px;
+   bottom: 20px;
    right: 20px;
    z-index: 20000;
  }
@@ -208,12 +153,5 @@
    border-radius: 12px;
    border: 2px solid #f14d34;
    border-radius: 5px;
- }
- @media (min-width:768px) {
-  .fixed-bottom-right {
-
-   bottom: 20px;
-
- }
  }
  </style>
