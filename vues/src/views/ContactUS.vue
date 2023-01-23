@@ -58,7 +58,34 @@
        comment: ''
      }
    },
- 
+ mounted() {
+    if (localStorage.name) {
+      this.name = localStorage.name;
+    }
+    if (localStorage.email) {
+      this.email = localStorage.email;
+    }
+    if (localStorage.number) {
+      this.number = localStorage.number;
+    }
+    if (localStorage.comment) {
+      this.comment = localStorage.comment;
+    }
+  },
+  watch: {
+    name(newName) {
+      localStorage.name = newName;
+    },
+    email(newEmail) {
+      localStorage.email= newEmail;
+    },
+    number(newNumber) {
+      localStorage.number = newNumber;
+    },
+    comment(newComment) {
+      localStorage.comment = newComment;
+    }
+  },
  methods: {
    async submitForm() {
      this.$store.commit('setLoading', true);
