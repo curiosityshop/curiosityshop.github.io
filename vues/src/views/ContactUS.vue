@@ -75,6 +75,10 @@
        });
        if (response.ok) {
          this.$store.commit('setSuccess', true);
+         this.name='';
+         this.number='';
+         this.email='';
+         this.comment='';
          this.message="Form submitted successfully!";
        } else {
          throw new Error('Failed to submit form. Please try again.');
