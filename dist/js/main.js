@@ -148,7 +148,7 @@ $(document).ready(function () {
             alert("Ошибка! " + response.message);
           }
         }
-      });
+      }); 
     });
   });
 
