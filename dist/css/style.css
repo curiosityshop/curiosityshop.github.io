@@ -50,6 +50,7 @@ body {
   }
   .video-container {
     position: relative;
+    z-index:-3;
   }
   
   .video-container img {
