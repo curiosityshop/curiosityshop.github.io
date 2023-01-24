@@ -86,42 +86,43 @@ $(document).ready(function () {
 
   
   document.addEventListener("DOMContentLoaded", function (event) {
-    let names = document.getElementById("InputName");
-  let phone = document.getElementById("InputPhone");
-  let email = document.getElementById("InputEmail");
-  let msg = document.getElementById("Textarea");
-  let cb = document.getElementById("Check");
 
-  function save() {
-    localStorage.setItem("Имя", names.value);
-    localStorage.setItem("Телефон",phone.value)
-    localStorage.setItem("Почта", email.value);
-    localStorage.setItem("Сообщение", msg.value);
-    if (cb.checked) {
-        localStorage.setItem('Чекбокс', 1);
-      } else {
-        localStorage.setItem('Чекбокс', 0);
-      }
-  }
-    names.value = localStorage.getItem("Имя");
-    phone.value = localStorage.getItem("Телефон");
-    email.value = localStorage.getItem("Почта");
-    msg.value = localStorage.getItem("Сообщение");
-    let checkBox = localStorage.getItem('Чекбокс');
-    if (checkBox == 1) {
-      cb.checked = true;
-    } else if (checkBox == 0) {
-      cb.checked = false;
-    }
-  
-    names.oninput = save;
-    phone.oninput = save;
-    email.oninput = save;
-    msg.oninput = save;
-    cb.onclick = save;
   });
 
   $(function () {
+    let names = document.getElementById("InputName");
+    let phone = document.getElementById("InputPhone");
+    let email = document.getElementById("InputEmail");
+    let msg = document.getElementById("Textarea");
+    let cb = document.getElementById("Check");
+  
+    function save() {
+      localStorage.setItem("Имя", names.value);
+      localStorage.setItem("Телефон",phone.value)
+      localStorage.setItem("Почта", email.value);
+      localStorage.setItem("Сообщение", msg.value);
+      if (cb.checked) {
+          localStorage.setItem('Чекбокс', 1);
+        } else {
+          localStorage.setItem('Чекбокс', 0);
+        }
+    }
+      names.value = localStorage.getItem("Имя");
+      phone.value = localStorage.getItem("Телефон");
+      email.value = localStorage.getItem("Почта");
+      msg.value = localStorage.getItem("Сообщение");
+      let checkBox = localStorage.getItem('Чекбокс');
+      if (checkBox == 1) {
+        cb.checked = true;
+      } else if (checkBox == 0) {
+        cb.checked = false;
+      }
+    
+      names.oninput = save;
+      phone.oninput = save;
+      email.oninput = save;
+      msg.oninput = save;
+      cb.onclick = save;
     $(".ajaxForm").submit(function (e) {
       e.preventDefault();
       var href = $(this).attr("action");
@@ -147,7 +148,7 @@ $(document).ready(function () {
             alert("Ошибка! " + response.message);
           }
         }
-      });
+      }); 
     });
   });
 

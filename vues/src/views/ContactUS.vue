@@ -3,6 +3,7 @@
     
      <button id="btn" class="fixed-bottom-right" @click="showForm = true" :disabled="isLoading">Связь с нами</button>
 
+     <transition name="slide-fade">
      <div id="diag" class="dialog" v-if="showForm" @click.stop="hideForm">
      <div @click.stop class="form-popup" >
        <div class="form-dialog" id="forma">
@@ -39,6 +40,7 @@
        </div>
      </div>
    </div>
+  </transition>
  
    </div>
    
@@ -180,6 +182,20 @@ this.hideForm();
  
  
  <style>
+ 
+ .slide-fade-enter-active {
+  transition: all .8s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter-from, .slide-fade-leave-to
+/* .slide-fade-leave-active до версии 2.1.8 */ {
+  transform: translateX(300px);
+  opacity: 0;
+}
  
  .form-dialog {
    width:100%;

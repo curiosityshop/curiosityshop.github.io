@@ -830,56 +830,70 @@
 
 <div class="cases__cards">
 <figure class="cases__card cases__card_size_small">
-  <img src="/img/cases-1.webp" alt="" class = "cases__card_pic_small_dark">
+  <img src="img/cases-1.webp" alt="" class = "cases__card_pic_small_dark">
+  <a href="https://drupal-coding.com/">
   <p class ="cases__card_text_dark">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
+  </a>
   <span class="cases__date_dark">22.04.2019</span>
   <p class="cases__card_desc">
     Эти слова совершенно справедливы, однако гипнотический рифф продолжает паузный пласт.
   </p>
 </figure>
 <figure class="cases__card cases__card_size_big">
-  <img src="/img/cases-2.webp" alt="" class = "cases__card_pic_big">
+  <img src="img/cases-2.webp" alt="" class = "cases__card_pic_big">
+  <a href="https://drupal-coding.com/">
   <p class ="cases__card_text_big">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
+  </a>
 </figure>
 <figure class="cases__card cases__card_size_small">
-  <img src="/img/cases-3.webp" alt="" class = "cases__card_pic_small">
+  <img src="img/cases-3.webp" alt="" class = "cases__card_pic_small">
+  <a href="https://drupal-coding.com/">
   <p class ="cases__card_text_small">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
+  </a>
   <p class="cases__date">22.04.2019</p>
 </figure>
 <figure class="cases__card cases__card_size_small">
-  <img src="/img/cases-4.webp" alt="" class = "cases__card_pic_small">
+  <img src="img/cases-4.webp" alt="" class = "cases__card_pic_small">
+  <a href="https://drupal-coding.com/">
   <p class ="cases__card_text_small">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
+  </a>
   <p class="cases__date">22.04.2019</p>
 </figure>
 <figure class="cases__card cases__card_size_small">
-  <img src="/img/cases-5.webp" alt="" class = "cases__card_pic_small_dark">
+  <img src="img/cases-5.webp" alt="" class = "cases__card_pic_small_dark">
+  <a href="https://drupal-coding.com/">
   <p class ="cases__card_text_dark">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
+  </a>
   <p class="cases__date_dark">22.04.2019</p>
   <p class="cases__card_desc">
     Эти слова совершенно справедливы, однако гипнотический рифф продолжает паузный пласт.
   </p>
 </figure>
 <figure class="cases__card cases__card_size_big">
-  <img src="/img/cases-6.webp" alt="" class = "cases__card_pic_big">
+  <img src="img/cases-6.webp" alt="" class = "cases__card_pic_big">
+  <a href="https://drupal-coding.com/">
   <p class ="cases__card_text_big">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
+  </a>
 </figure>
 <figure class="cases__card cases__card_size_small">
-  <img src="/img/cases-7.webp" alt="" class = "cases__card_pic_small">
+  <img src="img/cases-7.webp" alt="" class = "cases__card_pic_small">
+  <a href="https://drupal-coding.com/">
   <p class ="cases__card_text_small">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
+  </a>
   <p class="cases__date">22.04.2019</p>
 </figure>
 </div>
