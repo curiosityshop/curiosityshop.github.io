@@ -6,18 +6,22 @@
      <div id="diag" class="dialog" v-if="showForm" @click.stop="hideForm">
      <div @click.stop class="form-popup" >
        <div class="form-dialog" id="forma">
-         <form @submit.prevent="submitForm">
+        <form @submit.prevent="submitForm">
            <div class="form-group">
              <input type="text" v-model="name" name="name" class="form-control" id="InputName" placeholder="Ваше имя" required>
+             <span class="text-danger" v-if="errors.name">{{ errors.name }}</span>
            </div>
            <div class="form-group">
              <input type="tel" v-model="number" name="phone" class="form-control" id="InputPhone" placeholder="Телефон" required>
+             <span class="text-danger" v-if="errors.number">{{ errors.number }}</span>
            </div>
            <div class="form-group">
              <input type="email" v-model="email" name="email" class="form-control" id="InputEmail" placeholder="E-mail" required>
+             <span class="text-danger" v-if="errors.email">{{ errors.email }}</span>
            </div>
            <div class="form-group">
              <textarea v-model="comment" name="msg" class="form-control" id="Textarea" rows="3" placeholder="Ваш комментарий"></textarea>
+             <span class="text-danger" v-if="errors.comment">{{ errors.comment }}</span>
            </div>
            <div class="form-check">
              <input type="checkbox" class="form-check-input" id="Check" required>
@@ -47,7 +51,8 @@
    ...mapState({
      isLoading: state => state.isLoading,
      success: state => state.success,
-     error: state => state.error
+     error: state => state.error,
+     errors: state => state.errors,
    }),
 
 
@@ -65,7 +70,14 @@
 
  methods: {
    async submitForm() {
-     this.$store.commit('setLoading', true);
+    this.$store.dispatch('validateForm', {
+                name: this.name,
+    number: this.number,
+email: this.email,
+comment: this.comment
+})
+if(Object.keys(this.$store.state.errors).length) return
+this.$store.commit('setLoading', true);
      try {
        const response = await fetch('https://formcarry.com/s/6V6Ujnz1n', {
          method: 'POST',
@@ -99,35 +111,36 @@
    },
    hideForm() {
        this.showForm = false;
-       history.pushState(true, null, "#");
+       history.pushState(false, null, "\u0000");
      },
      sForm() {
        this.showForm = true;
      }
  },
- mounted() {
-  window.addEventListener("popstate", () => {
-    this.hideForm();
-  });
+ created(){
 
+ },
+ beforeUnmount(){
+this.hideForm();
+ },
+ mounted() {
   if (location.hash === "#contactus") {
     this.sForm();
   }
 
-
   
-    document.addEventListener('DOMContentLoaded', function () {
-      let c = document.getElementById("btn");
+  window.addEventListener("popstate", () => {
+    if(location.hash === "#contactus"){
+      this.sForm();
+    }
+    if(location.hash === ""){
+    this.hideForm();}
+})
 
+  let c = document.getElementById("btn");
   c.addEventListener("click", () => {
     history.pushState(true, null, "#contactus");
-  
-  });
 
-
-  if (location.hash === "#contactus") {
-    this.sForm();
-  }
 
 
   
@@ -167,7 +180,6 @@
  
  
  <style>
- /* existing styles for fixed-bottom-right and form-popup */
  
  .form-dialog {
    width:100%;

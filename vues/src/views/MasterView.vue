@@ -830,7 +830,7 @@
 
 <div class="cases__cards">
 <figure class="cases__card cases__card_size_small">
-  <img src="/img/cases-1.png" alt="" class = "cases__card_pic_small_dark">
+  <img src="/img/cases-1.webp" alt="" class = "cases__card_pic_small_dark">
   <p class ="cases__card_text_dark">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
@@ -840,27 +840,27 @@
   </p>
 </figure>
 <figure class="cases__card cases__card_size_big">
-  <img src="/img/cases-2.png" alt="" class = "cases__card_pic_big">
+  <img src="/img/cases-2.webp" alt="" class = "cases__card_pic_big">
   <p class ="cases__card_text_big">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
 </figure>
 <figure class="cases__card cases__card_size_small">
-  <img src="/img/cases-3.png" alt="" class = "cases__card_pic_small">
+  <img src="/img/cases-3.webp" alt="" class = "cases__card_pic_small">
   <p class ="cases__card_text_small">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
   <p class="cases__date">22.04.2019</p>
 </figure>
 <figure class="cases__card cases__card_size_small">
-  <img src="/img/cases-4.png" alt="" class = "cases__card_pic_small">
+  <img src="/img/cases-4.webp" alt="" class = "cases__card_pic_small">
   <p class ="cases__card_text_small">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
   <p class="cases__date">22.04.2019</p>
 </figure>
 <figure class="cases__card cases__card_size_small">
-  <img src="/img/cases-5.png" alt="" class = "cases__card_pic_small_dark">
+  <img src="/img/cases-5.webp" alt="" class = "cases__card_pic_small_dark">
   <p class ="cases__card_text_dark">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
@@ -870,13 +870,13 @@
   </p>
 </figure>
 <figure class="cases__card cases__card_size_big">
-  <img src="/img/cases-6.png" alt="" class = "cases__card_pic_big">
+  <img src="/img/cases-6.webp" alt="" class = "cases__card_pic_big">
   <p class ="cases__card_text_big">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
 </figure>
 <figure class="cases__card cases__card_size_small">
-  <img src="/img/cases-7.png" alt="" class = "cases__card_pic_small">
+  <img src="/img/cases-7.webp" alt="" class = "cases__card_pic_small">
   <p class ="cases__card_text_small">
     Настройка выгрузки YML для Яндекс.Маркета
   </p>
