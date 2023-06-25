@@ -50,7 +50,6 @@ body {
   }
   .video-container {
     position: relative;
-    z-index:-3;
   }
   
   .video-container img {
@@ -350,7 +349,7 @@ padding-left: 40px;
  }
  /*start cringe*/
  header{
-  height: 99vh;
+  height: 900px;
   
 }
 video{
@@ -789,6 +788,35 @@ color: #050C33;
 
 }
 
+#btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #eaeaea;
+  color: #555555;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Replace with your desired envelope icon library and styles */
+.fa-envelope:before {
+  content: "\2709";
+}
+
+/* Add any additional styles to customize the button */
+
+
+
 .t-brdr{
   margin-top: 20px;
   width: 100%;
@@ -1095,7 +1123,7 @@ color: #050C33;
     padding-top: 40px;
   }
   header{
-    height: 110vh;
+    height: 900px;
     
   }
   header #container {
@@ -1621,12 +1649,14 @@ line-height: 51px;
   background: url('../img/svg/arrow-left.svg') no-repeat center;
   background-size: contain;
   font-size: 0;
+  cursor: pointer;
 }
 
 .slick__arrows .slick-next {
   background: url('../img/svg/arrow-right.svg') no-repeat center;
   background-size: contain;
   font-size: 0;
+  cursor: pointer;
 }
 
 .slick__arrows .slick-slide-num {
@@ -1634,10 +1664,12 @@ line-height: 51px;
   font-weight: 400;
   font-size: 28px;
   color: #e0e0e0;
+
 }
 
 .slick__arrows .slick-slide-num-current {
   color: #050c33;
+
 }
 
 /*reviews styles end */
@@ -1691,8 +1723,7 @@ line-height: 51px;
 }
 
 .partners img {
-  width:195px;
-  height:100%;
+
   display:block;
   margin: 0 auto;  
 }
@@ -1725,6 +1756,7 @@ line-height: 51px;
 
 .faq-container{
   width:100%;
+  padding-bottom: 20px;
 }
 .faq-text {
   font-size: 16px;
@@ -1749,6 +1781,7 @@ line-height: 51px;
 
 .faq-container details[open] summary{
   color:#f14d34;
+  
 }
 .faq-container details[open] span{
   color: #050C33;
