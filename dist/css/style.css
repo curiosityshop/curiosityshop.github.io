@@ -791,29 +791,28 @@ color: #050C33;
 #btn {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  
   border: none;
   outline: none;
-  padding: 10px;
+  padding: 13px;
   border-radius: 50%;
-  background-color: #eaeaea;
-  color: #555555;
+  background-color: #F14D34;
+  color: #ffffff;
   font-size: 16px;
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  right: 10px;
+  margin-bottom: 40px;
 }
 
-.icon {
-  display: inline-block;
-  margin-right: 5px;
+
+#msg_us_img{
+  height: 30px;
+  width: 30px;
+  filter: invert(81%) sepia(100%) saturate(0%) hue-rotate(203deg) brightness(104%) contrast(105%);
 }
 
-/* Replace with your desired envelope icon library and styles */
-.fa-envelope:before {
-  content: "\2709";
-}
-
-/* Add any additional styles to customize the button */
 
 
 
@@ -1084,6 +1083,15 @@ color: #050C33;
 
  }
  @media (min-width: 768px) {
+
+  #btn {
+
+    
+    right: 11px;
+    margin-bottom: 0px;
+  }
+
+
   header #container h1{
     font-size: 52px;
     text-align: left;
@@ -1215,6 +1223,13 @@ line-height: 51px;
  }
 
  @media (min-width: 992px) {
+  #btn {
+
+    
+    right: 24px;
+    margin-bottom: 0px;
+  }
+
   header #container {
     max-width: 970px;
     margin-top: 130px;
@@ -1710,6 +1725,7 @@ line-height: 51px;
 
 .partners .partners__slider-1 {
   margin: 10px 0px;
+
 }
 .partners .partners__slider-2 {
   margin: 10px 0px;
